@@ -1,0 +1,14 @@
+unsuspend_account:
+  cron: "0 0 * * *"
+  class: "AccountBlock::AccountJob"
+  queue: default
+
+ownership_update:
+  cron: "0 0 * * *"
+  class: "BxBlockPosts::NftOwnershipUpdateJob"
+  queue: default
+
+two_factor_authenticate_job:
+  cron: "0 0 * * *"
+  class: "AccountBlock::TwoFactorAuthenticateJob"
+  queue: default
